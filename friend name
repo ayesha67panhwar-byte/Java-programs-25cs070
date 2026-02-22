@@ -1,0 +1,12 @@
+public class FriendInfo {
+    public static void main(String[] args) {
+
+        String name = "Sara";
+        String emoji = "😎";
+        String tagline = "bhai sahab";
+
+        System.out.println("Friend Name: " + name);
+        System.out.println("Emoji: " + emoji);
+        System.out.println("Tagline: " + tagline);
+    }
+}
