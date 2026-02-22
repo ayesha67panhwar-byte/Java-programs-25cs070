@@ -1,0 +1,17 @@
+public class ShopDetails {
+    public static void main(String[] args) {
+
+        String shopName = "Bright Mart";
+        String productName = "Notebook";
+        int quantity = 25;
+        double price = 120.50;
+
+        System.out.println("Shop Name: " + shopName);
+        System.out.println("Product Name: " + productName);
+        System.out.println("Quantity Available: " + quantity);
+        System.out.println("Price per Product: Rs " + price);
+
+        double totalValue = quantity * price;
+        System.out.println("Total Stock Value: Rs " + totalValue);
+    }
+}
