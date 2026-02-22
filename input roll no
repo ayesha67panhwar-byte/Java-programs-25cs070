@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class UniversityRollNumbers {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        // Taking inputs
+        System.out.print("Enter University Name: ");
+        String universityName = sc.nextLine();
+
+        System.out.print("Enter Department Name: ");
+        String departmentName = sc.nextLine();
+
+        System.out.print("Enter Your Roll Number (e.g., 25CS070): ");
+        String yourRoll = sc.nextLine();
+
+        System.out.print("Enter Total Number of Students: ");
+        int totalStudents = sc.nextInt();
+
+        // Extract prefix and numeric part
+        String prefix = yourRoll.substring(0, 4);     // 25CS
+        int rollNumber = Integer.parseInt(yourRoll.substring(4)); // 070 → 70
+
+        System.out.println("\n--- Student Details ---");
+        System.out.println("University: " + universityName);
+        System.out.println("Department: " + departmentName);
+        System.out.println("Total Students: " + totalStudents);
+        System.out.println("\nGenerated Roll Numbers:");
+
+        // Generate roll numbers
+        for (int i = 0; i < totalStudents; i++) {
+            System.out.println(prefix + String.format("%03d", rollNumber + i));
+        }
+
+        sc.close();
+    }
+}
